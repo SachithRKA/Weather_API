@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.app .card-section {
+  border: 2px dashed #00f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #BFF6C3, #00FFD1);
+}
+.app .card-section .weather-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.app .card-section .weather-card .icon {
+  margin: 5px;
+}
+.app .card-section .weather-card .number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+.app .card-section .weather-card .unit {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+  padding-right: 10px;
+}
+.app .card-section .weather-card button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s, transform 0.3s;
+}
+.app .card-section .weather-card button:hover, .app .card-section .weather-card button.selected {
+  color: #3498db;
+}
+.app .card-section .weather-card button:active {
+  color: #2980b9;
+  transform: scale(0.95);
+}
+.app .card-section .weather-description, .app .card-section .location {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  line-height: 0;
+}
+.app .card-section .location {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-left: 55px;
+  padding-top: 15px;
+}
+
+/*# sourceMappingURL=App.css.map */
