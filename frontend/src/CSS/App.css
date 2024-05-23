@@ -70,5 +70,10 @@
   padding-left: 55px;
   padding-top: 15px;
 }
+.app .chart-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=App.css.map */
