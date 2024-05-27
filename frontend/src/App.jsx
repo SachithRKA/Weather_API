@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import './CSS/App.css';
-import Table from './Table';
+import CanvasJSReact from "@canvasjs/react-charts";
+
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 function App() {
   const [message, setMessage] = useState({
@@ -62,8 +65,72 @@ function App() {
     setSelectedUnit(unit);
   }
 
+  // Weather Table section: Fixing
+  // const options = {
+  //   animationEnabled: true,
+  //   theme: "light2",
+  //   title:{
+  //     text: ""
+  //   },
+  //   axisX:{
+  //     valueFormatString: "hh",
+  //     crosshair: {
+  //       enabled: true,
+  //       snapToDataPoint: true
+  //     }
+  //   },
+  //   axisY: {
+  //     title: "",
+  //     valueFormatString: "",
+  //     crosshair: {
+  //       enabled: true,
+  //       snapToDataPoint: true,
+  //       labelFormatter: function(e) {
+  //         return CanvasJS.formatNumber(e.value, "##00");
+  //       }
+  //     }
+  //   },
+  //   data: [{
+  //     type: "area",
+  //     xValueFormatString: "hh",
+  //     yValueFormatString: "##00",
+  //     dataPoints: [
+  //       { x: new Date(message.datetime_c[0]), y: message.temp_h_c[0]},
+  //       { x: new Date(message.datetime_c[1]), y: message.temp_h_c[1]},
+  //       { x: new Date(message.datetime_c[2]), y: message.temp_h_c[2]},
+  //       { x: new Date(message.datetime_c[3]), y: message.temp_h_c[3]},
+  //       { x: new Date(message.datetime_c[4]), y: message.temp_h_c[4]},
+  //       { x: new Date(message.datetime_c[5]), y: message.temp_h_c[5]},
+  //       { x: new Date(message.datetime_c[6]), y: message.temp_h_c[6]},
+  //       { x: new Date(message.datetime_c[7]), y: message.temp_h_c[7]},
+  //       { x: new Date(message.datetime_c[8]), y: message.temp_h_c[8]},
+  //       { x: new Date(message.datetime_c[9]), y: message.temp_h_c[9]},
+  //       { x: new Date(message.datetime_c[10]), y: message.temp_h_c[10]},
+  //       { x: new Date(message.datetime_c[11]), y: message.temp_h_c[11]},
+  //       { x: new Date(message.datetime_c[12]), y: message.temp_h_c[12]},
+  //       { x: new Date(message.datetime_c[13]), y: message.temp_h_c[13]},
+  //       { x: new Date(message.datetime_c[14]), y: message.temp_h_c[14]},
+  //       { x: new Date(message.datetime_c[15]), y: message.temp_h_c[15]},
+  //       { x: new Date(message.datetime_c[16]), y: message.temp_h_c[16]},
+  //       { x: new Date(message.datetime_c[17]), y: message.temp_h_c[17]},
+  //       { x: new Date(message.datetime_c[18]), y: message.temp_h_c[18]},
+  //       { x: new Date(message.datetime_c[19]), y: message.temp_h_c[19]},
+  //       { x: new Date(message.datetime_c[20]), y: message.temp_h_c[20]},
+  //       { x: new Date(message.datetime_c[21]), y: message.temp_h_c[21]},
+  //       { x: new Date(message.datetime_c[22]), y: message.temp_h_c[22]},
+  //       { x: new Date(message.datetime_c[23]), y: message.temp_h_c[23]}
+  //     ]
+  //   }]
+  // }
+
   return (
     <div className="app">
+      {/* <div>
+        <CanvasJSChart options = {options} 
+        />
+      </div> */}
+
+
       <div className="card-section">
         <div className="location">
           <span>{message.address.toUpperCase()}</span>
@@ -93,10 +160,6 @@ function App() {
           <span>{message.description}</span>
         </div>
       </div>
-
-      {/* <div>
-        <Table />
-      </div> */}
     </div>
   );
 }
